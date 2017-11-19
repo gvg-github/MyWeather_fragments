@@ -1,0 +1,52 @@
+<resources>
+    <string name="app_name">MyWeather_fragments</string>
+    <string name="text_pressure">Pressure</string>
+    <string name="text_day">Day</string>
+    <string name="text_week">Week</string>
+    <string name="text_moonphase">Moon phase</string>
+
+    <string-array name="city_array">
+        <item>Moskow</item>
+        <item>Saint Petersburg</item>
+        <item>Tyumen</item>
+        <item>Novosibirsk</item>
+        <item>Ekaterinburg</item>
+        <item>Chelyabinsk</item>
+        <item>Omsk</item>
+        <item>Vladivostok</item>
+        <item>Anadyr</item>
+    </string-array>
+
+    <string-array name="weather_array">
+        <item>Hot</item>
+        <item>Cold</item>
+        <item>Warm</item>
+        <item>Cool</item>
+        <item>Very cold</item>
+    </string-array>
+
+    <string-array name="pressure_array">
+        <item>735 mmHg</item>
+        <item>729 mmHg</item>
+        <item>710 mmHg</item>
+        <item>678 mmHg</item>
+        <item>650 mmHg</item>
+    </string-array>
+
+    <string-array name="temperature_array">
+        <item>28°C</item>
+        <item>-18°C</item>
+        <item>15°C</item>
+        <item>8°C</item>
+        <item>-35°C</item>
+    </string-array>
+
+    <string name="weather_text">Text</string>
+    <string name="button_sendMessage">Send to friend</string>
+    <string name="bigSize_text">30sp</string>
+    <string name="city_text">City</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="additional_text">Additional_text</string>
+</resources>

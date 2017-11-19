@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <FrameLayout
+        android:id="@+id/weatherFragment_container"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        >
+    </FrameLayout>
+</LinearLayout>
+
+
+    <!--&lt;!&ndash;<ImageView&ndash;&gt;-->
+    <!--&lt;!&ndash;android:id="@+id/weather_image"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:layout_width="match_parent"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:src="@drawable/w001"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:layout_weight="8"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:layout_gravity="center"&ndash;&gt;-->
+    <!--&lt;!&ndash;/>&ndash;&gt;-->
+
+    <!--<ScrollView-->
+        <!--android:id="@+id/scroll_weatherText"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:clipToPadding="true"-->
+        <!--android:layout_gravity="fill_horizontal"-->
+        <!--android:layout_below="@+id/city_text"-->
+        <!--tools:layout_editor_absoluteY="0dp"-->
+        <!--tools:layout_editor_absoluteX="8dp">-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/weather_text"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_gravity="clip_vertical"-->
+            <!--android:text="@string/weather_text"-->
+            <!--android:layout_below="@+id/city_text"-->
+            <!--android:textSize="@string/bigSize_text"-->
+            <!--tools:layout_editor_absoluteX="0dp"-->
+            <!--tools:layout_editor_absoluteY="39dp" />-->
+
+    <!--</ScrollView>-->
+
+    <!--<Button-->
+        <!--android:id="@+id/button_sendMessage"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="@string/button_sendMessage"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:layout_alignParentRight="true"-->
+        <!--tools:layout_editor_absoluteY="108dp"-->
+        <!--tools:layout_editor_absoluteX="8dp" />-->
+
+
+
+
