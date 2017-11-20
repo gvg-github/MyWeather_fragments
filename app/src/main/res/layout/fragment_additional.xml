@@ -9,6 +9,7 @@
         android:id="@+id/additional_text"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:textSize="@dimen/mainTextSize"
         android:text="@string/additional_text" />
 
 </FrameLayout>

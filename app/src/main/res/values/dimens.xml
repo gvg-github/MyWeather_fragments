@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="mainTextSize">20sp</dimen>
+    <dimen name="bigTextSize">30sp</dimen>
+    <dimen name="image_size">100sp</dimen>
 </resources>

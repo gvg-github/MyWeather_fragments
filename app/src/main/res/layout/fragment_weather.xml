@@ -4,25 +4,24 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <ImageView
-        android:id="@+id/weather_image"
-        android:layout_width="100sp"
-        android:layout_height="100sp"
-        android:src="@drawable/w001"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="false"
-        android:layout_marginRight="50dp"
-
-        />
-
     <TextView
         android:id="@+id/cityFragment_text"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignStart="@id/weather_image"
-        android:layout_marginLeft="100dp"
+        android:layout_centerHorizontal="true"
+        tools:text="123"
         android:text="@string/city_text"
-        android:textSize="@dimen/mainTextSize" />
+        android:textSize="@dimen/bigTextSize" />
+
+    <ImageView
+        android:id="@+id/weather_image"
+        android:layout_width="@dimen/image_size"
+        android:layout_height="@dimen/image_size"
+        android:src="@drawable/w001"
+        android:layout_below="@+id/cityFragment_text"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="false"
+        android:contentDescription="@string/image_text" />
 
     <TextView
         android:id="@+id/weather_text"
@@ -30,8 +29,28 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/cityFragment_text"
         android:layout_alignStart="@id/weather_image"
-        android:layout_marginLeft="100dp"
+        android:layout_marginStart="@dimen/image_size"
         android:text="@string/weather_text"
+        android:textSize="@dimen/mainTextSize" />
+
+    <TextView
+        android:id="@+id/temperature_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/weather_text"
+        android:layout_alignStart="@id/weather_image"
+        android:layout_marginStart="@dimen/image_size"
+        android:text="@string/temperature_text"
+        android:textSize="@dimen/mainTextSize" />
+
+    <TextView
+        android:id="@+id/wind_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/temperature_text"
+        android:layout_alignStart="@id/weather_image"
+        android:layout_marginStart="@dimen/image_size"
+        android:text="@string/wind_text"
         android:textSize="@dimen/mainTextSize" />
 
     <Button
@@ -39,7 +58,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
         android:text="@string/button_sendMessage" />
 
     <FrameLayout
@@ -50,17 +69,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
-        android:textSize="@dimen/mainTextSize"
-        >
-    </FrameLayout>
+        android:textSize="@dimen/mainTextSize" />
 
 
 </RelativeLayout>
-
-    <!--<TextView--><!--android:id="@+id/weather_text"--><!--android:layout_width="match_parent"--><!--android:layout_height="wrap_content"--><!--android:layout_gravity="clip_vertical"--><!--android:text="@string/weather_text"--><!--android:textSize="@string/bigSize_text"--><!--android:layout_below="@+id/city_text"--><!--/>-->
-
-    <!--<Button--><!--android:id="@+id/button_sendMessage"--><!--android:layout_width="wrap_content"--><!--android:layout_height="wrap_content"--><!--android:layout_alignParentBottom="true"--><!--android:layout_alignParentRight="true"--><!--android:text="@string/button_sendMessage"/>-->
-
-    <!--</RelativeLayout>-->
-
-    <!--<ImageView--><!--android:id="@+id/weather_image"--><!--android:layout_width="match_parent"--><!--android:layout_height="wrap_content"--><!--android:src="@drawable/w001"--><!--android:layout_weight="8"--><!--android:layout_gravity="center"--><!--/>-->

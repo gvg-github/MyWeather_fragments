@@ -9,6 +9,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.CheckBox;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -22,15 +23,18 @@ public class MainFragment extends Fragment {
 
     private List<ClassCity> cities;
     private WeatherListListener mainActivity;
+    private CheckBox pressureBox;
+    private CheckBox moonBox;
+    private CheckBox dayBox;
+    private CheckBox weekBox;
 
     public MainFragment() {
         // Required empty public constructor
     }
 
-    interface WeatherListListener{
-        void onListItemClick(int id);
+    interface WeatherListListener {
+        void onListItemClick(int id, boolean[] checkBoxes);
     }
-
 
     @Override
     public void onAttach(Context context) {
@@ -41,8 +45,13 @@ public class MainFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
+
         View mainView = inflater.inflate(R.layout.fragment_main, container, false);
+
+        pressureBox = mainView.findViewById(R.id.checkbox_pressure);
+        moonBox = mainView.findViewById(R.id.checkbox_moon);
+        dayBox = mainView.findViewById(R.id.checkbox_day);
+        weekBox = mainView.findViewById(R.id.checkbox_week);
 
         FillCityList();
 
@@ -56,8 +65,8 @@ public class MainFragment extends Fragment {
 
     private void FillCityList() {
         cities = new ArrayList<>();
-        String[]citiesArray = getResources().getStringArray(R.array.city_array);
-        if (citiesArray.length != 0){
+        String[] citiesArray = getResources().getStringArray(R.array.city_array);
+        if (citiesArray.length != 0) {
             for (int i = 0; i < citiesArray.length; i++) {
                 ClassCity newCity = new ClassCity(citiesArray[i]);
                 cities.add(newCity);
@@ -65,8 +74,8 @@ public class MainFragment extends Fragment {
         }
     }
 
-    private void showWeatherScreen(int layoutPosition) {
-        mainActivity.onListItemClick(layoutPosition);
+    private void showWeatherScreen(int layoutPosition, boolean[] checkBoxes) {
+        mainActivity.onListItemClick(layoutPosition, checkBoxes);
     }
 
     private class MyViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
@@ -86,13 +95,9 @@ public class MainFragment extends Fragment {
 
         @Override
         public void onClick(View v) {
-            showWeatherScreen(this.getLayoutPosition());
+            boolean[] checkBoxes = new boolean[]{pressureBox.isChecked(), moonBox.isChecked(), dayBox.isChecked(), weekBox.isChecked()};
+            showWeatherScreen(this.getLayoutPosition(), checkBoxes);
 //                Intent intent = new Intent(v.getContext(), WeatherActivity.class);
-//                intent.putExtra(ARRAY_INDEX, getLayoutPosition());
-//                intent.putExtra(CHECKBOX_PRESSURE, boxPressure.isChecked());
-//                intent.putExtra(CHECKBOX_MOONPHASE, boxMoon.isChecked());
-//                intent.putExtra(CHECKBOX_TOMORROW, boxTomorrow.isChecked());
-//                intent.putExtra(CHECKBOX_WEEK, boxWeek.isChecked());
 //                startActivityForResult(intent, RETURN_NUMBER);
         }
     }
@@ -116,5 +121,4 @@ public class MainFragment extends Fragment {
             return cities.size();
         }
     }
-
 }

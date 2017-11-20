@@ -19,7 +19,7 @@ public class ClassCity {
     }
 
     @Override
-    public String toString(){
+    public String toString() {
         return name;
     }
 }
